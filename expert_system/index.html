@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>expert_system</title>
+	</head>
+	<body style='background: lightgreen;'>
+		<h1 style='text-align: center;'>Экспертная система</h1>
+		<script>
+		'use strict';
+		let operand_1		= prompt('Введите, пожалуйста, Ваше первое число', 1); 
+	//	alert(operand_1);
+		let operand_2		= prompt('Введите, пожалуйста, Ваше второе число', 1); 
+		let sign			= prompt('Введите, пожалуйста, знак желаемого арифметического действия', '+');
+		let result;
+
+			if(sign=='+')
+			{
+				alert(Number(operand_1) + Number(operand_2));
+			}
+			
+			else if(sign=='-')
+			{
+				alert(Number(operand_1) - Number(operand_2));
+			}
+			else if(sign=='*')
+			{
+				alert(Number(operand_1) * Number(operand_2));
+			}
+			else if(sign=='/')
+			{
+				alert(Number(operand_1) / Number(operand_2));
+			}
+			else
+			{
+				alert('Вы ввели непонятный знак действия');
+			}
+			
+		//let result			= +(operand_1 + sign + operand_2);
+		//alert(result);
+
+		
+		
+		
+		
+		
+		</script>
+	</body>
+</html>
