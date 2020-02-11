@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>array</title>
+	</head>
+	<body style = 'background: lightgreen;'>
+	<h1 style='text-align: center;'>array</h1>
+	<input type='button' value='Вывод всех' title='Вывод всех элементов массива' onclick='display_all()'> 
+	<input type='button' value='Вывести длину массива' title='Запуск кода программы' onclick='display_length()'> 
+	<input type='button' value='Вывести элемент массива' title='Запуск кода программы' onclick='display_element()'> 
+	<input type='button' value='Добавить элемент' title='Добавить элемент в конец массива' onclick='add_element()'> 
+		<script>
+
+		'use strict';
+		let fruits = ["Яблоко", "Слива", "Груша", "Абрикос", "Вишня",];
+//Функция 		выводит все элементы массива
+		function display_all()
+		{
+			alert(fruits);
+		}
+		function display_element()
+		{
+			let element	= prompt('Введите номер элемента, который Вы хотите увидеть', 0);
+			if (element < fruits.length )
+			{
+				alert(fruits[element]);
+			}
+			else
+			{
+			  alert( 'Извините, такого элемента нет!' );
+			}
+	
+		}
+		function display_length()
+		{
+			alert( fruits.length );	
+		}
+		function add_element()
+		{
+			let element	= prompt('Введите имя нового элемента массива', 'Трактор');
+			fruits.push(element);
+			alert('Элемент "' + element + '" успешно добавлен!' );	
+		}
+		
+		</script>
+		
+	</body>
+</html>
