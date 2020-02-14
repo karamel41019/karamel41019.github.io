@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>alphabet</title>
+	</head>
+	<body style = 'background: lightgreen;'>
+	<h1 style='text-align: center;'>alphabet</h1>
+	<input type='button' value='Вывести слово "WORLD"' title='Вывести слово "WORLD"' onclick='display_world()'>
+	<input type='button' value='Создать служебный алфавит' title='Создать служебный алфавит' onclick='create_new_alphabet()'>	
+	<input type='button' value='Вывести слово responsibility ' title='Вывести слово responsibility ' onclick='display_responsibility()'>	
+	<input type='button' value='Вывести любое слово ' title='Вывести любое слово' onclick='display_any_word()'>
+		<script>
+
+		'use strict';
+		let alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+		let new_alphabet	= [];
+		function display_world()
+		{
+			alert(alphabet[22] + alphabet[14] + alphabet[17] + alphabet[11] + alphabet[3]);
+		}
+		function create_new_alphabet()
+		{
+			for(let i = 0; i < alphabet.length; i++)
+			{
+				new_alphabet[i] = alphabet[i] + "(" + i + ")";
+			}
+			alert(new_alphabet);
+		}
+		function display_responsibility()
+		{
+			alert(alphabet[17] + alphabet[4] + alphabet[18] + alphabet[15] + alphabet[14] + alphabet[13] + alphabet[18] + alphabet[8] + alphabet[1] + alphabet[8] + alphabet[11] + alphabet[8] + alphabet[19] + alphabet[24]);
+		}
+		function display_any_word()
+		{
+			let new_word = [];
+			let received_word = prompt('Введите любое слово по-английски', 'WORD');
+			received_word = received_word.toUpperCase();
+			alert( received_word[0] );
+			for(let j = 0; j < received_word.length; j++ )
+			{
+				for (let i = 0; i < alphabet.length; i++ )
+				{
+					if(received_word[j] === alphabet[i])
+					{
+						alert(alphabet[i] + "("+ i +")");
+						new_word.push(alphabet[i]);
+					}
+				}
+			}
+			
+			alert(new_word);
+		}
+		
+		</script>
+		
+	</body>
+</html>
